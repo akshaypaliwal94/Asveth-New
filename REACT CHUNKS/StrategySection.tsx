@@ -5,23 +5,23 @@ const StrategySection: React.FC = () => {
     {
       number: "01",
       icon: "🔬",
-      tag: "Diagnosis · Value ₹2,500",
+      tag: "Assessment · Value ₹2,500",
       title: "The Health Audit Call",
-      description: "A live Zoom session — not a sales call. Asveth reviews your blood markers, injury history, and 3–4 days of eating patterns to identify the precise internal blocks preventing your transformation. Most people have never been told why their body isn't responding. They've only been told to try harder. This call ends that."
+      description: "A live Zoom session — not a sales call. Asveth assesses your symptoms, injury history, and eating patterns to identify what blood markers you should test and what internal blocks to investigate. Most people have never been told what to look for. They've only been told to try harder. This call shows you exactly what to examine."
     },
     {
       number: "02", 
       icon: "📋",
-      tag: "Report · Value ₹1,500",
-      title: "Personalised Diagnostic Report",
-      description: "Your specific blood marker flags — D3, testosterone, thyroid, HbA1c, B12. Your injury profile review. Your dietary gap analysis. Every item identified as a named, specific internal block for your body — not a body type. A private blood test interpretation alone costs ₹800–1,200 at a clinic — without dietary or injury analysis."
+      tag: "Guidance · Value ₹1,500",
+      title: "Personalised Testing Roadmap",
+      description: "Your personalized testing roadmap — which specific blood markers to test (D3, testosterone, thyroid, HbA1c, B12), how to interpret results, and what dietary patterns to track. Every recommendation tailored to your symptoms and goals — not generic advice. This level of personalized health guidance normally requires multiple specialist consultations."
     },
     {
       number: "03",
       icon: "🎯", 
       tag: "Roadmap · Value ₹2,000",
       title: "Custom Transformation Roadmap",
-      description: "A personalised action framework specific to your blood markers, injury profile, and dietary reality. Not a generic plan — a roadmap that says 'for your body, here's the sequence: fix this first, then add this, then build this.' You don't leave with information. You leave with a clear, specific, immediately actionable next step."
+      description: "A personalised action framework based on your symptoms, injury profile, and lifestyle reality. Not a generic plan — a roadmap that says 'here's what to test first, then what to optimize, then how to build.' You don't leave with vague advice. You leave with clear, specific, immediately actionable next steps to uncover your blocks."
     }
   ];
 
@@ -34,11 +34,11 @@ const StrategySection: React.FC = () => {
 
         <h2 className="section-headline">
           Not a Consultation.
-          <span>A Diagnosis.</span>
+          <span>An Assessment.</span>
         </h2>
 
         <p className="section-sub">
-          Here's exactly what you get in your Health Audit — ₹6,000 worth of diagnostic work for ₹97.
+          Here's exactly what you get in your Health Audit — ₹6,000 worth of health expertise and guidance for ₹97.
         </p>
 
         <div className="steps-wrap">

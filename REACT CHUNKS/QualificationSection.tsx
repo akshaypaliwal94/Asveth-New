@@ -65,7 +65,7 @@ const QualificationSection: React.FC = () => {
         </div>
 
         <div className="qualify-footer">
-          <span>⚠</span> If you're looking for a generic coach who skips the diagnosis — respectfully, this Health Audit is not designed for you.
+          <span>⚠</span> If you're looking for a generic coach who skips the assessment — respectfully, this Health Audit is not designed for you.
         </div>
       </section>
     </>

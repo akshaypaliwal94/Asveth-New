@@ -69,7 +69,7 @@ const MentorSection: React.FC<MentorSectionProps> = ({ onOpenQuiz }) => {
 
             <div className="mentor-bio">
               <p>
-                Asveth started where most of his clients are now — <strong>skinny, insecure, putting in effort with nothing to show for it.</strong> At 18, after four years of trial and error with no coach, no direction, and only YouTube for guidance, he figured out that results don't come from more effort. They come from the right diagnosis.
+                Asveth started where most of his clients are now — <strong>skinny, insecure, putting in effort with nothing to show for it.</strong> At 18, after four years of trial and error with no coach, no direction, and only YouTube for guidance, he figured out that results don't come from more effort. They come from the right assessment.
               </p>
               <p>
                 He's since completed <strong>two Stanford online courses in nutrition &amp; genetics and exercise methodology</strong>, competed at national level powerlifting — and won gold — and built a coaching practice of 65+ active clients across India and the Indian diaspora in Singapore, France, Dubai, and the UK.

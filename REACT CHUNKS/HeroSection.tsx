@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
 
   const bottomBarItems = [
     "Live Zoom Health Audit",
-    "Blood Marker Analysis", 
+    "Health Gap Assessment", 
     "Personalised Roadmap",
     "100% Money-Back Guarantee"
   ];
@@ -89,7 +89,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
             </h1>
 
             <p className="subheadline">
-              Watch this if you've been trying — and your body still isn't changing. Most coaches hand you a plan. Asveth <strong>runs your blood markers first</strong> — your <strong>D3, testosterone, thyroid, HbA1c</strong> — finds the exact biological block, then builds everything around it. Men who go through this <strong>lose 7–10kg and add 2 inches to their chest and shoulders in 90 days.</strong>
+              Watch this if you've been trying — and your body still isn't changing. Most coaches hand you a plan. Asveth <strong>shows you which blood markers to test first</strong> — your <strong>D3, testosterone, thyroid, HbA1c</strong> — identifies exactly what to investigate, then guides you through the process. Men who follow this approach <strong>lose 7–10kg and add 2 inches to their chest and shoulders in 90 days.</strong>
             </p>
 
             <div className="cta-wrap">

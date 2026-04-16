@@ -605,11 +605,11 @@ const QuizPopup: React.FC<QuizPopupProps> = ({ isOpen, onClose }) => {
                 <div className="qpop-price">₹97</div>
                 <div className="qpop-price-label">Adjusted against program fee if you join</div>
                 <ul className="qpop-checklist">
-                  <li>Full diagnostic audit of your body & blood markers</li>
-                  <li>90-day personalised roadmap</li>
-                  <li>Fitness & lifestyle assessment</li>
+                  <li>Complete health assessment consultation</li>
+                  <li>Personalised testing and action roadmap</li>
+                  <li>Health gap identification</li>
                 </ul>
-                <div className="qpop-note">45-min paid call · Fully dedicated to your plan</div>
+                <div className="qpop-note">Paid consultation · Fully dedicated to your assessment</div>
               </div>
             </div>
             <div className="qpop-footer-confirm">

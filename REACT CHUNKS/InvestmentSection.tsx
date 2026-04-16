@@ -9,15 +9,15 @@ const InvestmentSection: React.FC<InvestmentSectionProps> = ({ onOpenQuiz }) => 
     "People who pay show up. Free sessions get ignored.",
     "This is a filter, not a barrier. We only work with serious men.",
     "One gym PT session costs ₹1,500 and skips your blood markers entirely.",
-    "₹6,000 worth of diagnostic work. You pay ₹97.",
+    "₹6,000 worth of health expertise and guidance. You pay ₹97.",
     "No clarity? Full refund. No forms. Just WhatsApp us.",
-    "Every coach you've tried started with a plan. None of them started with a diagnosis.",
+    "Every coach you've tried started with a plan. None of them started with an assessment.",
     "Every month in that AC office, your D3 drops and the body you want gets harder to build.",
-    "₹97 to find out exactly why your body hasn't changed. Or keep wondering."
+    "₹97 to understand exactly what you need to investigate. Or keep wondering."
   ];
 
   const priceAnchors = [
-    { label: "Basic blood panel at a lab", price: "₹1,200" },
+    { label: "One health consultation", price: "₹2,000" },
     { label: "One PT session at gym", price: "₹1,500" },
     { label: "Starbucks for two people", price: "₹1,000" },
     { label: "Your Health Audit + roadmap", price: "₹97", highlight: true }
