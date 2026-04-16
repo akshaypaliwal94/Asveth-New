@@ -58,7 +58,6 @@ const CarouselSection: React.FC = () => {
               alt={`${card.name} transformation`}
               className="c-ba-image"
             />
-            <div className="c-ba-label">Before/After</div>
           </div>
         </div>
         <div className="c-ba-info">
