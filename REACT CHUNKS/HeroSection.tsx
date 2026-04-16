@@ -55,14 +55,12 @@ const HeroSection: React.FC = () => {
           <div className="top-bar">
             <div className="logo-wrap">
               <img 
-                src="/final-logo.png" 
+                src="/final-logo1.png" 
                 alt="The Athletic Indian" 
                 style={{
                   height: '48px',
                   width: 'auto',
-                  display: 'block',
-                  filter: 'invert(1) brightness(0) saturate(100%) contrast(2)',
-                  opacity: '0.8'
+                  display: 'block'
                 }}
               />
             </div>
@@ -144,7 +142,7 @@ const HeroSection: React.FC = () => {
               <div className="video-container">
                 <div className="video-thumb-bg" style={{ background: 'none' }}>
                   <img 
-                    src="/final-logo.png" 
+                    src="/final-logo1.png" 
                     style={{
                       width: '100%',
                       height: '100%',
@@ -152,8 +150,7 @@ const HeroSection: React.FC = () => {
                       objectPosition: 'center top',
                       position: 'absolute',
                       inset: '0',
-                      filter: 'invert(1) brightness(0.2) saturate(100%) contrast(1.8)',
-                      opacity: '0.4'
+                      opacity: '0.6'
                     }}
                     alt="Video thumbnail"
                   />

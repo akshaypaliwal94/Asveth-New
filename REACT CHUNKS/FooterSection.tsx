@@ -13,14 +13,13 @@ const FooterSection: React.FC = () => {
       <div className="footer-inner">
         <div className="footer-logo">
           <img 
-            src="/final-logo.png" 
+            src="/final-logo1.png" 
             alt="The Athletic Indian" 
             style={{
               height: '40px',
               width: 'auto',
               display: 'block',
-              opacity: '0.5',
-              filter: 'invert(1) brightness(0) saturate(100%) contrast(1.5)'
+              opacity: '0.85'
             }}
           />
         </div>
