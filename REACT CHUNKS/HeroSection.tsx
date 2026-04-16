@@ -142,15 +142,14 @@ const HeroSection: React.FC = () => {
               <div className="video-container">
                 <div className="video-thumb-bg" style={{ background: 'none' }}>
                   <img 
-                    src="/athletic-indian-logo.png" 
+                    src="/thumbnail.png" 
                     style={{
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
                       objectPosition: 'center top',
                       position: 'absolute',
-                      inset: '0',
-                      opacity: '0.6'
+                      inset: '0'
                     }}
                     alt="Video thumbnail"
                   />
