@@ -13,7 +13,7 @@ const FooterSection: React.FC = () => {
       <div className="footer-inner">
         <div className="footer-logo">
           <img 
-            src="/placeholder-footer.png" 
+            src="/Final Logo.png" 
             alt="The Athletic Indian" 
             style={{
               height: '40px',

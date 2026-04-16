@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
           <div className="top-bar">
             <div className="logo-wrap">
               <img 
-                src="/placeholder-logo.png" 
+                src="/Final Logo.png" 
                 alt="The Athletic Indian" 
                 style={{
                   height: '48px',
@@ -142,7 +142,7 @@ const HeroSection: React.FC = () => {
               <div className="video-container">
                 <div className="video-thumb-bg" style={{ background: 'none' }}>
                   <img 
-                    src="/placeholder-logo.png" 
+                    src="/Final Logo.png" 
                     style={{
                       width: '100%',
                       height: '100%',
