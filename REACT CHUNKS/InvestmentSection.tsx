@@ -1,6 +1,10 @@
 import React from 'react';
 
-const InvestmentSection: React.FC = () => {
+interface InvestmentSectionProps {
+  onOpenQuiz?: () => void;
+}
+
+const InvestmentSection: React.FC<InvestmentSectionProps> = ({ onOpenQuiz }) => {
   const investmentPoints = [
     "People who pay show up. Free sessions get ignored.",
     "This is a filter, not a barrier. We only work with serious men.",
@@ -52,7 +56,14 @@ const InvestmentSection: React.FC = () => {
             </div>
             <div className="invest-price-label">One-Time · Risk-Free</div>
 
-            <a href="#" className="invest-cta-btn">
+            <a 
+              href="#" 
+              className="invest-cta-btn"
+              onClick={(e) => {
+                e.preventDefault();
+                onOpenQuiz && onOpenQuiz();
+              }}
+            >
               Book My Health Audit Now
               <span className="invest-cta-sub">₹97 · Full refund if no clarity</span>
             </a>

@@ -17,13 +17,13 @@ const MainPage: React.FC = () => {
 
   return (
     <main className="min-h-screen">
-      <HeroSection />
+      <HeroSection onOpenQuiz={openQuiz} />
       <StrategySection />
       <CarouselSection />
-      <MentorSection />
+      <MentorSection onOpenQuiz={openQuiz} />
       <QualificationSection />
-      <InvestmentSection />
-      <FinalCtaSection />
+      <InvestmentSection onOpenQuiz={openQuiz} />
+      <FinalCtaSection onOpenQuiz={openQuiz} />
       <FooterSection />
       <QuizPopup isOpen={isQuizOpen} onClose={closeQuiz} />
     </main>

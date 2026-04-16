@@ -1,6 +1,10 @@
 import React from 'react';
 
-const FinalCtaSection: React.FC = () => {
+interface FinalCtaSectionProps {
+  onOpenQuiz?: () => void;
+}
+
+const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ onOpenQuiz }) => {
   const stats = [
     { number: "100+", label: "Transformed" },
     { number: "45 min", label: "Health Audit" },
@@ -37,7 +41,14 @@ const FinalCtaSection: React.FC = () => {
           ))}
         </div>
 
-        <a href="#" className="final-cta-btn">
+        <a 
+          href="#" 
+          className="final-cta-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            onOpenQuiz && onOpenQuiz();
+          }}
+        >
           Book My Health Audit Now
           <span className="final-cta-btn-sub">Health Audit · ₹97 · Full Refund if No Clarity</span>
         </a>

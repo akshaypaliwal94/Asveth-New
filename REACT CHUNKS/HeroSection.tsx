@@ -1,6 +1,10 @@
 import React, { useRef } from 'react';
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onOpenQuiz?: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
   const videoRef = useRef<HTMLDivElement>(null);
 
   const scrollToVideo = (e: React.MouseEvent) => {
@@ -95,6 +99,16 @@ const HeroSection: React.FC = () => {
                 onClick={scrollToVideo}
               >
                 Watch How Asveth Fixes What Other Coaches Miss
+              </a>
+              <a 
+                href="#" 
+                className="cta-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenQuiz && onOpenQuiz();
+                }}
+              >
+                Book My Health Audit Now — ₹97
               </a>
             </div>
 
