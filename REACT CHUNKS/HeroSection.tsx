@@ -11,6 +11,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
     e.preventDefault();
     if (videoRef.current) {
       videoRef.current.scrollIntoView({ behavior: 'smooth' });
+      // Add attention-grabbing pulse after scroll
+      setTimeout(() => {
+        videoRef.current?.classList.add('video-highlight');
+        setTimeout(() => {
+          videoRef.current?.classList.remove('video-highlight');
+        }, 3000);
+      }, 800);
     }
   };
 
@@ -143,7 +150,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
           {/* VIDEO */}
           <div className="video-wrap" ref={videoRef}>
             <div className="video-outer-ring">
-              <div className="video-container">
+              <div className="video-container clickable-video" onClick={() => alert('Video player would open here - Please add your video URL')}>
                 <div className="video-thumb-bg" style={{ background: 'none' }}>
                   <img 
                     src="/video-thumbnail.png" 
@@ -163,6 +170,34 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
                     background: 'linear-gradient(180deg,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.55) 100%)'
                   }}></div>
                 </div>
+                
+                {/* Large Premium Play Button */}
+                <div className="video-play-button">
+                  <div className="play-button-outer">
+                    <div className="play-button-inner">
+                      <svg 
+                        width="32" 
+                        height="32" 
+                        viewBox="0 0 24 24" 
+                        fill="none"
+                        className="play-icon"
+                      >
+                        <path 
+                          d="M8 5v14l11-7z" 
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="play-button-pulse"></div>
+                </div>
+                
+                {/* Video Duration Badge */}
+                <div className="video-duration-badge">
+                  <span className="duration-text">FREE TRAINING</span>
+                  <span className="duration-time">47 MINS</span>
+                </div>
+                
                 <div className="video-overlay"></div>
               </div>
             </div>
