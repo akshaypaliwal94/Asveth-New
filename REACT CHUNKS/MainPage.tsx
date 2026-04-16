@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroSection from './HeroSection';
 import StrategySection from './StrategySection';
 import CarouselSection from './CarouselSection';
@@ -15,15 +15,55 @@ const MainPage: React.FC = () => {
   const openQuiz = () => setIsQuizOpen(true);
   const closeQuiz = () => setIsQuizOpen(false);
 
+  // Scroll-triggered animation setup
+  useEffect(() => {
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          // For number counters
+          if (entry.target.classList.contains('counter-trigger')) {
+            entry.target.classList.add('count-active');
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe all sections for scroll animations
+    const animatedElements = document.querySelectorAll('.scroll-reveal, .counter-trigger');
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      animatedElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <main className="min-h-screen">
       <HeroSection onOpenQuiz={openQuiz} />
-      <StrategySection />
-      <CarouselSection />
-      <MentorSection onOpenQuiz={openQuiz} />
-      <QualificationSection />
-      <InvestmentSection onOpenQuiz={openQuiz} />
-      <FinalCtaSection onOpenQuiz={openQuiz} />
+      <div className="scroll-reveal">
+        <StrategySection />
+      </div>
+      <div className="scroll-reveal">
+        <CarouselSection />
+      </div>
+      <div className="scroll-reveal">
+        <MentorSection onOpenQuiz={openQuiz} />
+      </div>
+      <div className="scroll-reveal">
+        <QualificationSection />
+      </div>
+      <div className="scroll-reveal">
+        <InvestmentSection onOpenQuiz={openQuiz} />
+      </div>
+      <div className="scroll-reveal">
+        <FinalCtaSection onOpenQuiz={openQuiz} />
+      </div>
       <FooterSection />
       <QuizPopup isOpen={isQuizOpen} onClose={closeQuiz} />
       

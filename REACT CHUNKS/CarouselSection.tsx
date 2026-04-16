@@ -50,7 +50,7 @@ const CarouselSection: React.FC = () => {
     };
 
     return (
-      <div key={card.id} className="c-card ba-card">
+      <div key={card.id} className="c-card c-ba-card">
         <div className="c-ba-split">
           <div className="c-ba-slot">
             <img 
@@ -84,8 +84,8 @@ const CarouselSection: React.FC = () => {
       
       <section className="carousel-section">
         <div className="carousel-header">
-          <p className="carousel-eyebrow">
-            <strong>100+ men</strong> have gone through the Diagnostic-First Method
+          <p className="carousel-eyebrow counter-trigger">
+            <strong><span className="counter-number">100+</span> men</strong> have gone through the Diagnostic-First Method
           </p>
           <h2 className="carousel-headline">See What Asveth's Clients Achieve</h2>
         </div>

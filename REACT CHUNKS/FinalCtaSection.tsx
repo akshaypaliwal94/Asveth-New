@@ -27,11 +27,13 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ onOpenQuiz }) => {
           Every day you wait is another day you wake up in a body that doesn't match the man you've built everywhere else. <strong>The gap doesn't close itself.</strong>
         </p>
 
-        <div className="final-cta-stats">
+        <div className="final-cta-stats counter-trigger">
           {stats.map((stat, index) => (
             <React.Fragment key={index}>
               <div>
-                <div className="final-stat-num">{stat.number}</div>
+                <div className="final-stat-num">
+                  <span className="counter-number">{stat.number}</span>
+                </div>
                 <div className="final-stat-label">{stat.label}</div>
               </div>
               {index < stats.length - 1 && (

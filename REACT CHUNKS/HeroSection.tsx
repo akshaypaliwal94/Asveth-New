@@ -110,7 +110,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
               <div className="social-proof">
                 <div className="avatars">
                   {avatars.map((avatar, index) => (
-                    <div key={index} className={`av a${index + 1}`}>
+                    <div key={index} className={`av a${index + 1} proof-avatar`}>
                       {avatar}
                     </div>
                   ))}

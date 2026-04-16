@@ -1835,3 +1835,296 @@ html, body {
   color: rgba(255,255,255,0.15) !important;
   margin-top: 8px;
 }
+
+/* ── CONVERSION-OPTIMIZED ANIMATIONS ── */
+
+/* Scroll Reveal Animations - Based on Motion-Driven Best Practices */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+.scroll-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Animation for Child Elements */
+.scroll-reveal.animate-in > * {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-reveal.animate-in > *:nth-child(1) { animation-delay: 0.1s; }
+.scroll-reveal.animate-in > *:nth-child(2) { animation-delay: 0.2s; }
+.scroll-reveal.animate-in > *:nth-child(3) { animation-delay: 0.3s; }
+.scroll-reveal.animate-in > *:nth-child(4) { animation-delay: 0.4s; }
+.scroll-reveal.animate-in > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Premium CTA Button Micro-Interactions */
+.invest-cta-btn,
+.final-cta-btn,
+.mobile-cta-btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.invest-cta-btn::before,
+.final-cta-btn::before,
+.mobile-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.invest-cta-btn:hover::before,
+.final-cta-btn:hover::before,
+.mobile-cta-btn:hover::before {
+  left: 100%;
+}
+
+.invest-cta-btn:hover,
+.final-cta-btn:hover,
+.mobile-cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 8px 32px rgba(249,115,22,0.4),
+    0 0 0 1px rgba(255,255,255,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.invest-cta-btn:active,
+.final-cta-btn:active,
+.mobile-cta-btn:active {
+  transform: translateY(0) scale(1);
+  transition: all 0.1s;
+}
+
+/* Number Counter Animation */
+.counter-trigger {
+  overflow: hidden;
+}
+
+.counter-number {
+  display: inline-block;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.counter-trigger.count-active .counter-number {
+  transform: translateY(0);
+  opacity: 1;
+  animation: countUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Social Proof Pulse Animation */
+.proof-avatar {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.proof-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(249,115,22,0.3);
+}
+
+/* Client Cards Hover Effects */
+.c-ba-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+}
+
+.c-ba-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 16px 48px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(249,115,22,0.2);
+}
+
+/* Mentor Card Animation */
+.mentor-photo-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+}
+
+.mentor-photo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,0.4),
+    0 0 0 2px rgba(249,115,22,0.3);
+}
+
+/* Investment Price Pulse */
+.invest-amount {
+  animation: pricePulse 3s ease-in-out infinite;
+}
+
+/* Qualification Cards Interactive */
+.qualify-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.qualify-card:hover {
+  transform: translateY(-4px);
+}
+
+.yes-card:hover {
+  box-shadow: 0 12px 36px rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.no-card:hover {
+  box-shadow: 0 12px 36px rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pricePulse {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(249,115,22,0.3);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(249,115,22,0.6);
+  }
+}
+
+/* Hero Video Play Button Animation */
+.play-btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.play-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(249,115,22,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.play-btn:hover::after {
+  width: 120%;
+  height: 120%;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px rgba(249,115,22,0.4);
+}
+
+/* Strategy Cards Animation */
+.strategy-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.strategy-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 16px 48px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(249,115,22,0.15);
+}
+
+/* Mobile CTA Lightning Icon Animation */
+.mobile-cta-icon {
+  display: inline-block;
+  animation: lightningPulse 2s ease-in-out infinite;
+}
+
+@keyframes lightningPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Loading Animation for Buttons */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: buttonSpin 1s linear infinite;
+}
+
+@keyframes buttonSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .counter-trigger,
+  .invest-cta-btn,
+  .final-cta-btn,
+  .mobile-cta-btn,
+  .c-ba-card,
+  .mentor-photo-card,
+  .qualify-card,
+  .play-btn,
+  .strategy-card {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .mobile-cta-icon {
+    animation: none !important;
+  }
+}
