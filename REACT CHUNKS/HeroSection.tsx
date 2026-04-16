@@ -78,7 +78,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
             </div>
 
             <h1 className="headline">
-              For The Man Who Has Everything —<br />
+              For The Man Who Has Everything<br />
               <em>Except The Body</em>{' '}
               <span style={{ 
                 WebkitTextFillColor: '#fff', 
