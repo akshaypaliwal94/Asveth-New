@@ -1156,3 +1156,96 @@ html, body {
   .invest-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); padding: 28px 20px; }
   .invest-right { padding: 28px 20px; width: 100%; }
 }
+
+/* ── FINAL CTA SECTION ── */
+.final-cta-section {
+  max-width: 640px;
+  margin: 32px auto 0;
+  padding: 48px 24px 64px;
+  position: relative; z-index: 1;
+  text-align: center;
+}
+
+.final-cta-eyebrow {
+  font-size: 10.5px; font-weight: 700;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.final-cta-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(52px, 9vw, 96px);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0;
+}
+.final-cta-headline .know {
+  display: block;
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.final-cta-body {
+  font-size: 15px; color: var(--muted);
+  line-height: 1.7;
+  max-width: 440px; margin: 28px auto 36px;
+}
+.final-cta-body strong { color: #e0e0e0; font-weight: 600; }
+
+/* stats row */
+.final-cta-stats {
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px; margin-bottom: 36px;
+}
+.final-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.final-stat-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--muted);
+}
+.final-stat-divider {
+  width: 1px; height: 40px;
+  background: var(--border);
+}
+
+/* CTA button */
+.final-cta-btn {
+  display: inline-flex; flex-direction: column;
+  align-items: center; gap: 5px;
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+  color: #000;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700; font-size: 16px;
+  padding: 18px 56px;
+  border-radius: 100px; border: none;
+  cursor: pointer; text-decoration: none;
+  box-shadow: 0 0 40px rgba(249,115,22,0.5), 0 8px 30px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: btnGlow 2.5s ease-in-out infinite;
+  width: 100%; max-width: 420px;
+}
+.final-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 60px rgba(249,115,22,0.7), 0 12px 36px rgba(0,0,0,0.5);
+}
+.final-cta-btn-sub {
+  font-size: 12px; font-weight: 600; opacity: 0.65;
+}
+
+.final-cta-footnote {
+  margin-top: 14px;
+  font-size: 11.5px; color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.final-cta-footnote span { margin: 0 6px; opacity: 0.4; }
