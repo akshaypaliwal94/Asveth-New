@@ -85,7 +85,7 @@ const CarouselSection: React.FC = () => {
       <section className="carousel-section">
         <div className="carousel-header">
           <p className="carousel-eyebrow">
-            <strong>65+ men</strong> have gone through the Diagnostic-First Method
+            <strong>100+ men</strong> have gone through the Diagnostic-First Method
           </p>
           <h2 className="carousel-headline">See What Asveth's Clients Achieve</h2>
         </div>
