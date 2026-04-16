@@ -1249,3 +1249,70 @@ html, body {
   letter-spacing: 0.5px;
 }
 .final-cta-footnote span { margin: 0 6px; opacity: 0.4; }
+
+/* ── FOOTER ── */
+.site-footer {
+  margin-top: 32px;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.4);
+  position: relative; z-index: 1;
+}
+
+.footer-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 24px 36px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 20px;
+}
+
+.footer-logo {
+  display: flex; align-items: center; gap: 8px;
+}
+.footer-logo-icon {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+}
+.footer-logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px; letter-spacing: 3px;
+  background: linear-gradient(90deg, #f97316, #fbbf24);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.footer-links {
+  display: flex; align-items: center;
+  flex-wrap: wrap; justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-links span { color: rgba(255,255,255,0.15); }
+
+.footer-disclaimer {
+  display: flex; flex-direction: column; gap: 10px;
+  text-align: center;
+  max-width: 720px;
+}
+.footer-disclaimer p {
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.2);
+  line-height: 1.65;
+}
+.footer-disclaimer strong {
+  color: rgba(255,255,255,0.3);
+  font-weight: 600;
+}
+.footer-copyright {
+  font-size: 11px;
+  color: rgba(255,255,255,0.15) !important;
+  margin-top: 8px;
+}
