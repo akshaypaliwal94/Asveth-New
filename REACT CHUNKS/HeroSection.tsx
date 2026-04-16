@@ -61,9 +61,8 @@ const HeroSection: React.FC = () => {
                   height: '48px',
                   width: 'auto',
                   display: 'block',
-                  filter: 'brightness(1.2) contrast(1.1)',
-                  mixBlendMode: 'multiply',
-                  opacity: '0.9'
+                  filter: 'invert(1) brightness(0) saturate(100%) contrast(2)',
+                  opacity: '0.8'
                 }}
               />
             </div>
@@ -153,8 +152,8 @@ const HeroSection: React.FC = () => {
                       objectPosition: 'center top',
                       position: 'absolute',
                       inset: '0',
-                      filter: 'brightness(0.8) contrast(1.2)',
-                      opacity: '0.7'
+                      filter: 'invert(1) brightness(0.2) saturate(100%) contrast(1.8)',
+                      opacity: '0.4'
                     }}
                     alt="Video thumbnail"
                   />
