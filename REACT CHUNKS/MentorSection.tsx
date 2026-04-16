@@ -1,6 +1,10 @@
 import React from 'react';
 
-const MentorSection: React.FC = () => {
+interface MentorSectionProps {
+  onOpenQuiz?: () => void;
+}
+
+const MentorSection: React.FC<MentorSectionProps> = ({ onOpenQuiz }) => {
   const credentials = [
     {
       icon: "🎓",
