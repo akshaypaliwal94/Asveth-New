@@ -468,6 +468,233 @@ html, body {
 }
 
 /* ── RESPONSIVE ── */
+/* ── CAROUSEL SECTION ── */
+.carousel-section {
+  margin: 32px auto 0;
+  padding: 0 0 40px;
+  position: relative; z-index: 1;
+  overflow: hidden;
+}
+
+.carousel-header {
+  text-align: center;
+  padding: 0 16px;
+  margin-bottom: 28px;
+}
+.carousel-eyebrow {
+  font-size: 13px; color: var(--muted);
+  margin-bottom: 8px;
+}
+.carousel-eyebrow strong { color: var(--text); }
+.carousel-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 42px);
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.05;
+}
+
+.carousel-track-wrap {
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  padding: 8px 40px 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  user-select: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track.grabbing { cursor: grabbing; }
+
+.c-card {
+  flex-shrink: 0;
+  width: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #0d1018;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.c-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(249,115,22,0.08);
+}
+
+/* VIDEO CARD */
+.c-card.video-card {
+  height: 320px;
+}
+.c-card-media {
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, #111827 0%, #0d1018 100%);
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.c-media-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0.15; font-size: 48px;
+}
+.c-play-btn {
+  position: absolute; z-index: 3;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 8px rgba(249,115,22,0.15);
+  animation: playPulse 2.5s ease-in-out infinite;
+}
+.c-card-footer {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 14px 16px; z-index: 4;
+}
+
+/* STAT CARD */
+.c-card.stat-card {
+  height: 320px;
+  width: 240px;
+  background: linear-gradient(160deg, rgba(249,115,22,0.07) 0%, rgba(0,0,0,0) 60%), #0d1018;
+  border-color: rgba(249,115,22,0.2);
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 18px;
+}
+
+.carousel-nav {
+  display: flex; justify-content: flex-end;
+  gap: 10px; padding: 0 40px;
+  margin-top: 8px;
+}
+.carousel-btn {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.2s, border-color 0.2s;
+}
+.carousel-btn:hover {
+  background: rgba(249,115,22,0.15);
+  border-color: rgba(249,115,22,0.4);
+  color: var(--accent);
+}
+
+/* ── QUIZ POPUP ── */
+.qpop-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.82);
+  backdrop-filter: blur(4px);
+  align-items: center; justify-content: center;
+  padding: 16px;
+}
+.qpop-overlay.active { display: flex; }
+
+.qpop-modal {
+  width: 100%; max-width: 460px;
+  background: #14161e;
+  border-radius: 16px;
+  border: 1px solid rgba(249,115,22,0.2);
+  box-shadow: 0 0 80px rgba(249,115,22,0.12), 0 32px 64px rgba(0,0,0,0.7);
+  overflow: hidden;
+  position: relative;
+  animation: qpopIn 0.3s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes qpopIn {
+  from { opacity:0; transform: scale(0.92) translateY(16px); }
+  to   { opacity:1; transform: scale(1) translateY(0); }
+}
+
+.qpop-progress {
+  display: flex; gap: 5px;
+  padding: 18px 52px 0 20px;
+}
+.qpop-seg {
+  flex: 1; height: 3px; border-radius: 100px;
+  background: rgba(255,255,255,0.1);
+  transition: background 0.35s ease;
+}
+.qpop-seg.done { background: #f97316; }
+.qpop-seg.active { background: linear-gradient(90deg, #f97316, #fbbf24); }
+
+.qpop-close {
+  position: absolute; top: 14px; right: 16px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+  font-size: 14px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.qpop-close:hover { background: rgba(255,255,255,0.13); color: #fff; }
+
+.qpop-step { display: none; }
+.qpop-step.active { display: block; }
+
+.qpop-body {
+  padding: 22px 20px 0;
+}
+.qpop-q {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 18px;
+  text-transform: uppercase; color: #fff;
+  line-height: 1.2; margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+.qpop-options { display: flex; flex-direction: column; gap: 8px; }
+
+.qpop-option {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+.qpop-option:hover {
+  border-color: rgba(249,115,22,0.3);
+  background: rgba(249,115,22,0.05);
+}
+.qpop-option.selected {
+  border-color: rgba(249,115,22,0.6);
+  background: rgba(249,115,22,0.09);
+}
+
+.qpop-radio {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.2);
+  flex-shrink: 0; position: relative;
+  transition: border-color 0.2s;
+}
+.qpop-option.selected .qpop-radio {
+  border-color: #f97316;
+}
+.qpop-option.selected .qpop-radio::after {
+  content: '';
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #f97316;
+}
+
+/* ── SECTION DIVIDER ── */
+.section-divider {
+  max-width: 900px; margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(249,115,22,0.15), transparent);
+}
+
 @media (max-width: 768px) {
   .outer-wrap {
     padding: 12px 12px 32px;
@@ -520,4 +747,6 @@ html, body {
   .bottom-bar {
     padding: 12px 16px;
   }
+
+  .carousel-track { padding: 8px 16px 16px; }
 }
