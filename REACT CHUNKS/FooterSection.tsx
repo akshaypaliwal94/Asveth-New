@@ -19,7 +19,9 @@ const FooterSection: React.FC = () => {
               height: '40px',
               width: 'auto',
               display: 'block',
-              opacity: '0.85'
+              opacity: '0.6',
+              filter: 'brightness(1.1) contrast(1.1)',
+              mixBlendMode: 'screen'
             }}
           />
         </div>
