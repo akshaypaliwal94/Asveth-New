@@ -42,7 +42,7 @@ const MentorSection: React.FC<MentorSectionProps> = ({ onOpenQuiz }) => {
           {/* LEFT: photo card */}
           <div className="mentor-photo-card">
             <img 
-              src="/VSL-photo 2.webp" 
+              src="/mentor-photo.webp" 
               style={{
                 width: '100%',
                 height: '100%', 
