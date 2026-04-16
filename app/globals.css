@@ -1116,6 +1116,61 @@ html, body {
     font-size: 18px;
   }
   
+  /* Fix mobile hero arrows and social proof */
+  .proof-row {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 -8px 16px;
+    padding: 0 8px;
+  }
+  
+  .arrow-svg {
+    width: 40px;
+    height: 32px;
+    flex-shrink: 1;
+    opacity: 0.6;
+  }
+  
+  .arrow-right-flip {
+    order: 3;
+  }
+  
+  .social-proof {
+    flex: 1;
+    min-width: 0;
+    order: 2;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+  }
+  
+  .avatars {
+    gap: 4px;
+  }
+  
+  .av {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+  
+  .proof-divider {
+    margin: 0 6px;
+  }
+  
+  .proof-text {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  
+  .stars {
+    font-size: 11px;
+  }
+  
+  .stars-label {
+    font-size: 9px;
+  }
+  
   .step-row {
     flex-direction: column;
     align-items: center;
@@ -1155,6 +1210,97 @@ html, body {
   .invest-card { grid-template-columns: 1fr; }
   .invest-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); padding: 28px 20px; }
   .invest-right { padding: 28px 20px; width: 100%; }
+  
+  /* Additional mobile optimizations for premium appearance */
+  .subheadline {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 4px;
+  }
+  
+  .cta-btn {
+    font-size: 14px;
+    padding: 14px 20px;
+    margin: 0 4px;
+  }
+  
+  .pre-headline {
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .video-wrap {
+    margin: 24px -8px 0;
+  }
+  
+  .video-outer-ring {
+    margin: 0 8px;
+  }
+  
+  /* Ensure premium mobile spacing */
+  .hero-body {
+    padding: 20px 16px 0;
+  }
+  
+  .outer-wrap {
+    padding: 8px 8px 32px;
+  }
+}
+
+/* ── EXTRA SMALL MOBILE OPTIMIZATIONS ── */
+@media (max-width: 480px) {
+  .proof-row {
+    margin: 0 -4px 12px;
+    padding: 0 4px;
+  }
+  
+  .arrow-svg {
+    width: 32px;
+    height: 26px;
+  }
+  
+  .social-proof {
+    gap: 4px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatars {
+    gap: 3px;
+    margin-bottom: 4px;
+  }
+  
+  .av {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+  
+  .stars-wrap {
+    margin-bottom: 4px;
+  }
+  
+  .proof-text {
+    font-size: 10px;
+  }
+  
+  .headline {
+    font-size: clamp(20px, 7vw, 36px);
+    line-height: 1.1;
+  }
+  
+  .subheadline {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .outer-wrap {
+    padding: 6px 6px 28px;
+  }
+  
+  .hero-body {
+    padding: 16px 12px 0;
+  }
 }
 
 /* ── FINAL CTA SECTION ── */
