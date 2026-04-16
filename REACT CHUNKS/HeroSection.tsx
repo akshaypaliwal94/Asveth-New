@@ -100,16 +100,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
               >
                 Watch How Asveth Fixes What Other Coaches Miss
               </a>
-              <a 
-                href="#" 
-                className="cta-btn"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onOpenQuiz && onOpenQuiz();
-                }}
-              >
-                Book My Health Audit Now — ₹97
-              </a>
             </div>
 
             {/* ARROWS + SOCIAL PROOF */}
