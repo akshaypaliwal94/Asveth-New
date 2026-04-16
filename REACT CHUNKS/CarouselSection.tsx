@@ -61,8 +61,8 @@ const CarouselSection: React.FC = () => {
           </div>
         </div>
         <div className="c-ba-info">
-          <div className="c-ba-name">
-            {card.name} <span className="c-ba-stat">{card.stat}</span>
+          <div className="c-ba-result">
+            {card.stat}
           </div>
           <div className="c-ba-desc">{card.description}</div>
         </div>
