@@ -192,11 +192,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
                   <div className="play-button-pulse"></div>
                 </div>
                 
-                {/* Video Duration Badge */}
-                <div className="video-duration-badge">
-                  <span className="duration-text">FREE TRAINING</span>
-                  <span className="duration-time">47 MINS</span>
-                </div>
                 
                 <div className="video-overlay"></div>
               </div>
