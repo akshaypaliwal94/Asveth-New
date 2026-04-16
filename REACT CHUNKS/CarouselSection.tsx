@@ -61,31 +61,38 @@ const CarouselSection: React.FC = () => {
     },
     {
       type: 'before-after',
-      id: 'muttukumar-ba',
-      name: 'Muttukumar',
+      id: 'kesavan-ba',
+      name: 'Kesavan',
       stat: 'Body Recomp',
-      description: 'Marathon runner. Still skinny fat. Fixed in 90 days without stopping his cardio.'
+      description: 'IT Professional. Working 12+ hours. Blood markers revealed D3 deficiency blocking results.'
     },
     {
       type: 'stat',
-      id: 'muttukumar-stat',
+      id: 'kesavan-stat',
       hashtag: '#AthleticIndian',
-      mainStat: '↓ 12 min\nMarathon\nPR',
-      badges: ['🏃 Dubai Runner', '↑ Protein Fixed', '✓ Body Recomp']
+      mainStat: '↑ 40%\nStrength\nGain',
+      badges: ['💪 D3 Fixed', '↑ Testosterone', '✓ IT Professional']
     },
     {
       type: 'video',
-      id: 'machala-video',
+      id: 'sanjeev-video',
       tag: 'Video Testimonial',
-      label: 'Machala\'s Story',
-      subtitle: 'France · 4kg + skin cleared · 1 month'
+      label: 'Sanjeev\'s Story',
+      subtitle: 'Bangalore · 15kg lost · 6 months'
+    },
+    {
+      type: 'before-after',
+      id: 'sanjeev-ba',
+      name: 'Sanjeev',
+      stat: '↓ 15kg',
+      description: 'Software Engineer. Tried everything. Blood work showed thyroid issues blocking fat loss.'
     },
     {
       type: 'stat',
-      id: 'machala-stat',
+      id: 'sanjeev-stat',
       hashtag: '#AthleticIndian',
-      mainStat: '85%\nPain\nResolved',
-      badges: ['💪 Strength Fixed', '✓ No Physio', 'IT Professional']
+      mainStat: '↓ 15kg\nFat Loss\nSuccess',
+      badges: ['🔥 Thyroid Fixed', '✓ No Crash Diets', 'Software Engineer']
     }
   ];
 
@@ -166,50 +173,75 @@ const CarouselSection: React.FC = () => {
     </div>
   );
 
-  const renderBeforeAfterCard = (card: BeforeAfterCard) => (
-    <div key={card.id} className="c-card ba-card">
-      <div className="c-ba-split">
-        <div className="c-ba-slot">
-          <div className="c-ba-slot-ph">📷</div>
-          <div className="c-ba-label">Before</div>
-        </div>
-        <div className="c-ba-slot after">
-          <div className="c-ba-slot-ph">📷</div>
-          <div className="c-ba-label">After</div>
-        </div>
-      </div>
-      <div className="c-ba-info">
-        <div className="c-ba-name">
-          {card.name} <span className="c-ba-stat">{card.stat}</span>
-        </div>
-        <div className="c-ba-desc">{card.description}</div>
-      </div>
-    </div>
-  );
+  const renderBeforeAfterCard = (card: BeforeAfterCard) => {
+    // Map client names to their image files
+    const getClientImage = (name: string) => {
+      const nameMap: { [key: string]: string } = {
+        'Rahul': 'rahul.png',
+        'Kesavan': 'kesavan.png',
+        'Sanjeev': 'sanjeev.png'
+      };
+      return `/client results/${nameMap[name] || 'rahul.png'}`;
+    };
 
-  const renderStatCard = (card: StatCard) => (
-    <div key={card.id} className="c-card stat-card">
-      <div className="c-stat-hashtag">{card.hashtag}</div>
-      <div>
-        <div className="c-stat-main">
-          <em>{card.mainStat.split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-              {index === 0 ? line : <><br />{line}</>}
-            </React.Fragment>
-          ))}</em>
+    return (
+      <div key={card.id} className="c-card ba-card">
+        <div className="c-ba-split">
+          <div className="c-ba-slot">
+            <img 
+              src={getClientImage(card.name)} 
+              alt={`${card.name} transformation`}
+              className="c-ba-image"
+            />
+            <div className="c-ba-label">Before/After</div>
+          </div>
         </div>
-        <div className="c-stat-badges">
-          {card.badges.map((badge, index) => (
-            <span key={index} className="c-stat-badge">{badge}</span>
-          ))}
+        <div className="c-ba-info">
+          <div className="c-ba-name">
+            {card.name} <span className="c-ba-stat">{card.stat}</span>
+          </div>
+          <div className="c-ba-desc">{card.description}</div>
         </div>
       </div>
-      <div className="c-stat-photo-strip">
-        <div className="c-stat-ph">📷</div>
-        <div className="c-stat-ph after-ph">📷</div>
+    );
+  };
+
+  const renderStatCard = (card: StatCard) => {
+    // Get client image based on card ID
+    const getStatClientImage = (cardId: string) => {
+      if (cardId.includes('rahul')) return '/client results/rahul.png';
+      if (cardId.includes('kesavan')) return '/client results/kesavan.png';
+      if (cardId.includes('sanjeev')) return '/client results/sanjeev.png';
+      return '/client results/rahul.png'; // fallback
+    };
+
+    return (
+      <div key={card.id} className="c-card stat-card">
+        <div className="c-stat-hashtag">{card.hashtag}</div>
+        <div>
+          <div className="c-stat-main">
+            <em>{card.mainStat.split('\n').map((line, index) => (
+              <React.Fragment key={index}>
+                {index === 0 ? line : <><br />{line}</>}
+              </React.Fragment>
+            ))}</em>
+          </div>
+          <div className="c-stat-badges">
+            {card.badges.map((badge, index) => (
+              <span key={index} className="c-stat-badge">{badge}</span>
+            ))}
+          </div>
+        </div>
+        <div className="c-stat-photo-strip">
+          <img 
+            src={getStatClientImage(card.id)} 
+            alt="Client transformation" 
+            className="c-stat-image"
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const renderCard = (card: CarouselCard) => {
     switch (card.type) {

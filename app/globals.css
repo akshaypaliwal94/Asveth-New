@@ -1339,6 +1339,22 @@ html, body {
   }
 }
 
+/* ── CLIENT TRANSFORMATION IMAGE STYLES ── */
+.c-ba-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.c-stat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* ── MOBILE FIXED BOTTOM CTA ── */
 .mobile-bottom-cta {
   position: fixed;
