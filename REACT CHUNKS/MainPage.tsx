@@ -26,6 +26,23 @@ const MainPage: React.FC = () => {
       <FinalCtaSection onOpenQuiz={openQuiz} />
       <FooterSection />
       <QuizPopup isOpen={isQuizOpen} onClose={closeQuiz} />
+      
+      {/* Mobile Fixed Bottom CTA */}
+      <div className="mobile-bottom-cta">
+        <div className="mobile-cta-content">
+          <div className="mobile-cta-info">
+            <div className="mobile-cta-title">Health Audit</div>
+            <div className="mobile-cta-price">Only ₹97</div>
+          </div>
+          <button 
+            className="mobile-cta-btn"
+            onClick={openQuiz}
+          >
+            <span className="mobile-cta-icon">⚡</span>
+            Book Now
+          </button>
+        </div>
+      </div>
     </main>
   );
 };
