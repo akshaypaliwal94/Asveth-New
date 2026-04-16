@@ -153,7 +153,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
               <div className="video-container clickable-video" onClick={() => alert('Video player would open here - Please add your video URL')}>
                 <div className="video-thumb-bg" style={{ background: 'none' }}>
                   <img 
-                    src="/video-thumbnail.png" 
+                    src="/video-thumnail-1.png" 
                     style={{
                       width: '100%',
                       height: '100%',
