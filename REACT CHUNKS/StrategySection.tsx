@@ -7,7 +7,7 @@ const StrategySection: React.FC = () => {
       icon: "🔬",
       tag: "Diagnosis · Value ₹2,500",
       title: "The Health Audit Call",
-      description: "A live 45-minute Zoom session — not a sales call. Asveth reviews your blood markers, injury history, and 3–4 days of eating patterns to identify the precise internal blocks preventing your transformation. Most people have never been told why their body isn't responding. They've only been told to try harder. This call ends that."
+      description: "A live Zoom session — not a sales call. Asveth reviews your blood markers, injury history, and 3–4 days of eating patterns to identify the precise internal blocks preventing your transformation. Most people have never been told why their body isn't responding. They've only been told to try harder. This call ends that."
     },
     {
       number: "02", 
@@ -38,7 +38,7 @@ const StrategySection: React.FC = () => {
         </h2>
 
         <p className="section-sub">
-          Here's exactly what you get in your 45-minute Health Audit — ₹6,000 worth of diagnostic work for ₹97.
+          Here's exactly what you get in your Health Audit — ₹6,000 worth of diagnostic work for ₹97.
         </p>
 
         <div className="steps-wrap">

@@ -7,7 +7,7 @@ interface FinalCtaSectionProps {
 const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ onOpenQuiz }) => {
   const stats = [
     { number: "100+", label: "Transformed" },
-    { number: "45 min", label: "Health Audit" },
+    { number: "Complete", label: "Health Audit" },
     { number: "₹97", label: "One-Time" }
   ];
 

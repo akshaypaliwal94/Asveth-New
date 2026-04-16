@@ -22,7 +22,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuiz }) => {
   ];
 
   const bottomBarItems = [
-    "45-Min Live Zoom Audit",
+    "Live Zoom Health Audit",
     "Blood Marker Analysis", 
     "Personalised Roadmap",
     "100% Money-Back Guarantee"
