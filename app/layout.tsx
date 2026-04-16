@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   creator: 'The Athletic Indian',
   publisher: 'The Athletic Indian',
   robots: 'index, follow',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/final-logo.png', type: 'image/png' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/final-logo.png',
+  },
   openGraph: {
     title: 'The Athletic Indian – Male VSL',
     description: 'Transform your body and mindset with The Athletic Indian program',
