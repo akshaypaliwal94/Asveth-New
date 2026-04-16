@@ -500,17 +500,11 @@ html, body {
 }
 .carousel-track {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   padding: 8px 40px 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  user-select: none;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.carousel-track::-webkit-scrollbar { display: none; }
-.carousel-track.grabbing { cursor: grabbing; }
 
 .c-card {
   flex-shrink: 0;
