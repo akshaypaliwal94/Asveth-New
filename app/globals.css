@@ -823,6 +823,94 @@ html, body {
 }
 .cred-sub { font-size: 10.5px; color: var(--muted); }
 
+/* ── QUALIFICATION SECTION ── */
+.qualify-section {
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding: 0 16px 40px;
+  position: relative; z-index: 1;
+}
+
+.qualify-headline {
+  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: clamp(30px, 5vw, 52px);
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+.qualify-headline .not {
+  color: var(--accent);
+  font-style: italic;
+  font-family: 'Barlow', sans-serif;
+}
+
+.qualify-sub {
+  text-align: center;
+  font-size: 14px; color: var(--muted);
+  max-width: 440px; margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.qualify-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.qualify-card {
+  border-radius: 12px;
+  padding: 24px 26px 28px;
+  border: 1px solid;
+}
+.qualify-card.yes-card {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+.qualify-card.no-card {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.18);
+}
+
+.qualify-card-header {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.yes-card .qualify-card-header { color: #10b981; }
+.no-card  .qualify-card-header { color: #ef4444; }
+
+.qualify-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 11px;
+}
+.qualify-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13.5px; color: #d1d5db; line-height: 1.45;
+}
+.qualify-list li .qi {
+  flex-shrink: 0; margin-top: 1px;
+  font-size: 13px;
+}
+.yes-card .qi { color: #10b981; }
+.no-card  .qi { color: #ef4444; }
+
+.qualify-footer {
+  border: 1px solid rgba(249,115,22,0.2);
+  border-radius: 10px;
+  padding: 16px 24px;
+  background: rgba(249,115,22,0.05);
+  text-align: center;
+  font-size: 13px;
+  color: var(--accent2);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.qualify-footer span { opacity: 0.7; margin-right: 6px; }
+
 /* ── SECTION DIVIDER ── */
 .section-divider {
   max-width: 900px; margin: 0 auto;
@@ -888,4 +976,6 @@ html, body {
   .mentor-grid { grid-template-columns: 1fr; }
   .mentor-photo-card { max-width: 300px; margin: 0 auto; }
   .mentor-creds { grid-template-columns: 1fr; }
+
+  .qualify-grid { grid-template-columns: 1fr; }
 }
