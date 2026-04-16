@@ -16,7 +16,7 @@ const FooterSection: React.FC = () => {
             src="/athletic-indian-logo.png" 
             alt="The Athletic Indian" 
             style={{
-              height: '40px',
+              height: '48px',
               width: 'auto',
               display: 'block',
               opacity: '0.85'

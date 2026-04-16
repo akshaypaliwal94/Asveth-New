@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
                 src="/athletic-indian-logo.png" 
                 alt="The Athletic Indian" 
                 style={{
-                  height: '48px',
+                  height: '56px',
                   width: 'auto',
                   display: 'block'
                 }}
